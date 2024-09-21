@@ -1,0 +1,92 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import '@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+@import "./theme/fonts.scss";
+
+* {
+    font-family: Roboto;
+}
+
+swiper-container {
+    --swiper-pagination-color: var(--ion-color-white) !important;
+    // --swiper-pagination-bullet-inactive-color: rgba(255, 255, 255, 0.33);
+}
+
+swiper-container::part(bullet-active) {
+    width: 40px;
+    border-radius: 4px;
+}
+swiper-container::part(bullet) {
+    background: rgba(255, 255, 255, 0.33);
+    opacity: 1;
+}
+
+ion-list.transactions {
+    border-radius: 8vh 8vh 0 0;
+    background: var(--ion-color-secondary);
+    padding-bottom: 10vh;
+    ion-list-header {
+        padding-inline-start: 3.5vh;
+    }
+    ion-list-header, ion-item {
+        ion-label {
+            font-size: 1.1rem;
+        }
+    }
+
+    ion-item-group {
+        padding: 0 3.5vh;
+        ion-item {
+            font-weight: bold;
+            --background: transparent;
+            --border-style: dashed;
+            --border-color: var(--ion-color-tertiary);
+            --padding-bottom: 1rem;
+            --padding-top: 1rem;
+            --padding-start: 0;
+            ion-text[slot="end"] {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 0.9rem;
+                font-weight: normal;
+                margin-top: 3px;
+            }
+            ion-thumbnail {
+                height: 6vh;
+                width: 6vh;
+                border-radius: 10px;
+                background: var(--ion-color-white);
+                box-shadow: 0px 3px 6px rgb(3 181 170 / 4%);
+                img {
+                    height: 4vh;
+                    width: 4vh;
+                    transform: translateY(25%);
+                }
+            }
+        }
+    }
+}
